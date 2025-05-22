@@ -40,7 +40,6 @@ def chat() -> None:
             break
         messages.append(LLMMessage(role=Role.USER, content=message))
 
-        # use the OpenAI ChatCompletion API to generate a response
         response = mdl.chat(messages=messages, max_tokens=200)
 
         messages.append(response.to_LLMMessage())

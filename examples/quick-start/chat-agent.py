@@ -28,9 +28,9 @@ def chat() -> None:
         """
     )
     config = lr.ChatAgentConfig(
-        llm=lr.language_models.OpenAIGPTConfig(
-            chat_model=lr.language_models.OpenAIChatModel.GPT4o,
-        ),
+        llm = lr.language_models.OpenAIGPTConfig(
+        chat_model="deepseek/deepseek-chat"
+    ),
         vecdb=None,
     )
     agent = lr.ChatAgent(config)
